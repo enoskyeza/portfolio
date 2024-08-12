@@ -6,8 +6,8 @@ const Hero = () => {
         <section className="section-padding" id="hero-section">
             <h1 className="text-5xl font-bold pb-4">Mitti Enos Kyeza</h1>
             <h3 className="text-xl font-medium pb-4">Senior FullStack Engineer</h3>
-            <p className="font-extralight text-gray-400"
-               style={{ width: "280px", lineHeight:"1.6"}}>
+            <p className="section-body"
+               style={{ width: "280px"}}>
                 I build software solutions that deliver exceptional user experiences.
             </p>
 

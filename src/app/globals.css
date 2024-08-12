@@ -30,6 +30,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .section-title {
+    @apply uppercase pb-8 text-base
+  }
+  .section-body {
+    @apply font-extralight text-gray-400  leading-relaxed
+
+  }
+  .about-link {
+    @apply font-medium text-gray-300 hover:text-yellow-400 transition-colors duration-300 ease-in-out
+  }
 }
 
 .section-padding {
