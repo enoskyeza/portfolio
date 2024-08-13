@@ -43,7 +43,7 @@ body {
 
   /* Experience Section */
   .xp-date {
-    @apply font-extralight text-xs text-gray-400
+    @apply font-medium text-xs text-gray-400 uppercase
   }
   .xp-title {
     @apply font-medium text-gray-300 text-base pb-3 hover:text-yellow-400 transition-colors duration-300 ease-in-out
