@@ -31,14 +31,15 @@ body {
     text-wrap: balance;
   }
   .section-title {
-    @apply uppercase pb-8 text-base
+    @apply uppercase pb-12 text-base
   }
   .section-body {
     @apply font-extralight text-gray-400  leading-relaxed
 
   }
   .about-link {
-    @apply font-medium text-gray-300 hover:text-yellow-400 transition-colors duration-300 ease-in-out
+    @apply font-medium text-gray-300
+    hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
   }
 
   /* Experience Section */
@@ -46,23 +47,39 @@ body {
     @apply font-medium text-xs text-gray-400 uppercase
   }
   .xp-title {
-    @apply font-medium text-gray-300 text-base pb-3 hover:text-yellow-400 transition-colors duration-300 ease-in-out
+    @apply font-medium text-gray-300 text-base pb-3
+    hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
   }
   .xp-body {
     @apply font-extralight text-sm pb-5 leading-relaxed text-gray-400
   }
   .xp-skill{
-    @apply bg-cyan-500/30 rounded-full px-3.5 py-1.5 me-2 text-cyan-500 font-medium text-xs
+    @apply bg-cyan-500/30 rounded-full mb-2 px-3.5 py-1.5 me-2 text-cyan-500 font-medium text-xs w-fit
   }
 
   /*  Project Section */
   .project-img {
     @apply border-solid border-2 rounded-md border-gray-700 shadow-lg
-    hover:border-gray-500 hover:cursor-pointer transition-colors duration-300 ease-in-out
+    hover:border-gray-500 transition-colors duration-300 ease-in-out
+  }
+
+  .xp-link {
+    @apply flex gap-3 font-medium w-fit text-sm text-gray-300 pb-3
+    hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
   }
 }
 
 .section-padding {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.mouse-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.1s ease;
 }
