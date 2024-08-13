@@ -16,9 +16,9 @@ const Experience = () => {
                         <p className="xp-body">
                             {exp.responsibility}
                         </p>
-                        <div>
+                        <div className="flex flex-wrap">
                             {exp.skills.map((item) => (
-                                <span key={item} className="xp-skill">{item}</span>
+                                <div key={item} className="xp-skill">{item}</div>
                             ))
                             }
                         </div>

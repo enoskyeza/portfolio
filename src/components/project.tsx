@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Project = () => {
     return (
-        <section className="section-padding" id="experience-section">
-            <h2 className="section-title">Experience</h2>
+        <section className="section-padding" id="project-section">
+            <h2 className="section-title">Projects</h2>
             {projects.map((item) => (
                 <div key={item.id} className="flex gap-3 pb-16">
                     <div className="w-1/4">
@@ -34,16 +34,16 @@ const Project = () => {
                             </div>
                         }
 
-                        <div>
+                        <div className="flex flex-wrap">
                             {item.skills.map((skill, index) => (
-                                <span key={index} className="xp-skill">{skill}</span>
+                                <div key={index} className="xp-skill">{skill}</div>
                             ))
                             }
                         </div>
                     </div>
                 </div>
             ))}
-            <h4 className="xp-title flex gap-3 items-center">
+            <h4 className="xp-link items-center hover:gap-5">
                 View Full Projects Archive
                 <FaArrowRight />
             </h4>
