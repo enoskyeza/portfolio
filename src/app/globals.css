@@ -30,4 +30,33 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .section-title {
+    @apply uppercase pb-8 text-base
+  }
+  .section-body {
+    @apply font-extralight text-gray-400  leading-relaxed
+
+  }
+  .about-link {
+    @apply font-medium text-gray-300 hover:text-yellow-400 transition-colors duration-300 ease-in-out
+  }
+
+  /* Experience Section */
+  .xp-date {
+    @apply font-medium text-xs text-gray-400 uppercase
+  }
+  .xp-title {
+    @apply font-medium text-gray-300 text-base pb-3 hover:text-yellow-400 transition-colors duration-300 ease-in-out
+  }
+  .xp-body {
+    @apply font-extralight text-sm pb-5 leading-relaxed text-gray-400
+  }
+  .xp-skill{
+    @apply bg-cyan-500/30 rounded-full px-3.5 py-1.5 me-2 text-cyan-500 font-medium text-xs
+  }
+}
+
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
