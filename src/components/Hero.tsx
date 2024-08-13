@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section className="section-padding" id="hero-section">
             <h1 className="text-5xl font-bold pb-4">Mitti Enos Kyeza</h1>
-            <h3 className="text-xl font-medium pb-4">Senior FullStack Engineer</h3>
+            <h3 className="text-xl font-medium pb-4">Senior Full-Stack Developer</h3>
             <p className="section-body"
                style={{ width: "280px"}}>
                 I build software solutions that deliver exceptional user experiences.
