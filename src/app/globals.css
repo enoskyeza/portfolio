@@ -52,7 +52,7 @@ body {
     @apply font-extralight text-sm pb-5 leading-relaxed text-gray-400
   }
   .xp-skill{
-    @apply bg-cyan-500/35 rounded-full px-3.5 py-1.5 me-2 text-cyan-500 font-medium text-xs
+    @apply bg-cyan-500/30 rounded-full px-3.5 py-1.5 me-2 text-cyan-500 font-medium text-xs
   }
 }
 
