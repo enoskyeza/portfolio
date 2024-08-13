@@ -15,7 +15,7 @@ export default function Home() {
                 const { clientX: x, clientY: y } = event;
                 const scrollX = window.scrollX;
                 const scrollY = window.scrollY;
-                glow.style.transform = `translate(${x - 100 + scrollX}px, ${y - 100 + scrollY}px)`;
+                glow.style.transform = `translate(${x - 250 + scrollX}px, ${y - 250 + scrollY}px)`;
             }
         };
 
@@ -27,7 +27,7 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="flex min-h-screen flex-col p-12">
+        <main className="bg-gradient-custom flex min-h-screen flex-col p-12">
             <div className="mouse-glow"></div>
             <Hero />
             <About />
