@@ -1,11 +1,11 @@
 import React from "react";
-import { Experiences } from "@/components/data";
+import { experiences } from "@/components/data";
 
 const Experience = () => {
     return (
         <section className="section-padding" id="experience-section">
             <h2 className="section-title">Experience</h2>
-            {Experiences.map((exp) => (
+            {experiences.map((exp) => (
                 <div key={exp.id} className="flex gap-3 pb-16">
                     <div className="w-1/4">
                         <p className="xp-date"> {exp.start} — {exp.end} </p>
