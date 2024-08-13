@@ -1,5 +1,6 @@
 import React from "react";
-import { experiences } from "@/components/data";
+import {experiences} from "@/components/data";
+import {FaCloudDownloadAlt} from "react-icons/fa";
 
 const Experience = () => {
     return (
@@ -24,6 +25,10 @@ const Experience = () => {
                     </div>
                 </div>
             ))}
+            <h4 className="xp-title flex gap-3 items-center">
+                <FaCloudDownloadAlt/>
+                Download Full Résumé
+            </h4>
         </section>
     )
 }
