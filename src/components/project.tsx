@@ -2,6 +2,7 @@ import React from "react";
 import { projects } from "@/components/data";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
+import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
 
 const Project = () => {
@@ -9,18 +10,12 @@ const Project = () => {
         <section className="section-padding" id="project-section">
             <h2 className="section-title">Projects</h2>
             {projects.map((item) => (
-                <div key={item.id} className="flex gap-3 pb-16">
-                    <div className="w-1/4">
-                        <Image
-                            src={item.img_url}
-                            alt={item.name}
-                            width={200}
-                            height={200}
-                            className="project-img"
-                        />
-                    </div>
-                    <div className='w-3/4'>
-                        <h4 className="xp-title">{item.name}</h4>
+                <div key={item.id} className="sm:flex gap-3 pb-16">
+                    <div className='order-last sm:w-3/4'>
+                        <h4 className="xp-title">
+                            {item.name}
+                            <MdOutlineArrowOutward  className="mb-0.5 ms-1"/>
+                        </h4>
                         <p className="xp-body">
                             {item.description}
                         </p>
@@ -40,6 +35,15 @@ const Project = () => {
                             ))
                             }
                         </div>
+                    </div>
+                    <div className="mt-3 sm:mt-0 sm:w-1/4">
+                        <Image
+                            src={item.img_url}
+                            alt={item.name}
+                            width={200}
+                            height={200}
+                            className="project-img"
+                        />
                     </div>
                 </div>
             ))}

@@ -9,8 +9,9 @@
     --teal: 20, 158, 146;
     --coral: 255, 111, 97;
     --dark: 0, 61, 61;
+    --penn-black: 4, 20, 66;
     --gray: 0, 127, 128;
-    --light-green: 209, 214, 70;
+    --light-green: 0, 204, 204;
 
     /* Custom Gradient Background */
     --gradient-background: linear-gradient(225deg, hsla(224, 26%, 17%, 1) 0%, hsla(188, 69%, 21%, 1) 62%, hsla(185, 77%, 22%, 1) 81%, hsla(183, 87%, 23%, 1) 92%, hsla(180, 100%, 25%, 1) 100%);
@@ -62,6 +63,10 @@ body {
       background: var(--dark);
     }
 
+    .text-hover {
+      color:rgb(var(--light-green))
+    }
+
     .section-title {
         @apply uppercase pb-12 text-base
     }
@@ -73,7 +78,7 @@ body {
 
     .about-link {
         @apply font-medium text-gray-300
-        hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
+        hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
     }
 
     /* Experience Section */
@@ -83,7 +88,8 @@ body {
 
     .xp-title {
         @apply font-medium text-gray-300 text-base pb-3
-        hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
+        w-fit flex items-end hover:items-center hover:gap-0.5
+        hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
     }
 
     .xp-body {
@@ -91,7 +97,7 @@ body {
     }
 
     .xp-skill {
-        @apply bg-cyan-500/30 rounded-full mb-2 px-3.5 py-1.5 me-2 text-cyan-500 font-medium text-xs w-fit
+        @apply bg-[color:rgba(var(--light-green),0.2)] text-[color:rgb(var(--light-green))] rounded-full mb-2 px-3.5 py-1.5 me-2  font-medium text-xs w-fit
     }
 
     /*  Project Section */
@@ -102,7 +108,7 @@ body {
 
     .xp-link {
         @apply flex gap-3 font-medium w-fit text-sm text-gray-300 pb-3
-        hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
+        hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
     }
 }
 
@@ -116,7 +122,7 @@ body {
     position: absolute;
     width: 500px;
     height: 500px;
-    opacity: 55%;
+    opacity: 60%;
     background: radial-gradient(circle, rgba(0, 127, 128, 0.3), rgba(255, 255, 255, 0.0));
     filter: blur(50px);
     border-radius: 50%;
