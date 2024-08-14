@@ -133,7 +133,7 @@ body {
     }
 
     /* Custom CSS for opacity effect */
-    .projects:hover .lg-hover:not(:hover) {
+    .items-container:hover .lg-hover:not(:hover) {
         @apply opacity-50;
     }
 }

@@ -9,7 +9,7 @@ const Project = () => {
     return (
         <section className="section-padding" id="project-section">
             <h2 className="section-title">Projects</h2>
-            <div className="projects">
+            <div className="items-container">
                 {projects.map((item) => (
                     <div key={item.id} className="sm:flex gap-3 pb-16 lg:lg-hover group">
                         <div className='order-last sm:w-3/4'>
