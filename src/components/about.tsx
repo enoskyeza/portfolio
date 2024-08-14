@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
     return (
-        <section className="section-padding" id="about-section">
+        <section className="section-padding lg:px-4" id="about-section">
             <h2 className="section-title">About</h2>
             <p className="section-body">
                 My journey into tech began during the COVID-19 lockdown when the digital world became our lifeline.

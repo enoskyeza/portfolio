@@ -3,83 +3,151 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  }
+    --teal: 20, 158, 146;
+    --coral: 255, 111, 97;
+    --dark: 0, 61, 61;
+    --penn-black: 4, 20, 66;
+    --gray: 0, 127, 128;
+    --light-green: 0, 204, 204;
+
+    /* Custom Gradient Background */
+    --gradient-background: linear-gradient(225deg, hsla(224, 26%, 17%, 1) 0%, hsla(188, 69%, 21%, 1) 62%, hsla(185, 77%, 22%, 1) 81%, hsla(183, 87%, 23%, 1) 92%, hsla(180, 100%, 25%, 1) 100%);
+
+    /* Gradient 2 */
+    --gradient-primary: linear-gradient(135deg, hsla(224, 26%, 17%, 1) 0%, hsla(194, 51%, 18%, 1) 84%, hsla(190, 60%, 18%, 1) 92%, hsla(185, 71%, 19%, 1) 100%);
+
+    /* Gradient 2 */
+    --gradient-secondary: linear-gradient(45deg, hsla(224, 26%, 17%, 1) 0%, hsla(194, 51%, 18%, 1) 84%, hsla(190, 60%, 18%, 1) 100%);
+
 }
 
+
+/*:root {*/
+/*  --foreground-rgb: 0, 0, 0;*/
+/*  --background-start-rgb: 214, 219, 220;*/
+/*  --background-end-rgb: 255, 255, 255;*/
+/*  --teal: 20, 158, 146;*/
+/*  --coral: 255, 111, 97;*/
+
+/*}*/
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --foreground-rgb: 255, 255, 255;*/
+/*    --background-start-rgb: 0, 0, 0;*/
+/*    --background-end-rgb: 0, 0, 0;*/
+/*  }*/
+/*}*/
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  .section-title {
-    @apply uppercase pb-12 text-base
-  }
-  .section-body {
-    @apply font-extralight text-gray-400  leading-relaxed
+    /*.text-balance {*/
+    /*    text-wrap: balance;*/
+    /*}*/
+    .bg-gradient-custom {
+        background: var(--gradient-secondary);
+    }
 
-  }
-  .about-link {
-    @apply font-medium text-gray-300
-    hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
-  }
+    .bg-custom {
+        background: var(--dark);
+    }
 
-  /* Experience Section */
-  .xp-date {
-    @apply font-medium text-xs text-gray-400 uppercase
-  }
-  .xp-title {
-    @apply font-medium text-gray-300 text-base pb-3
-    hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
-  }
-  .xp-body {
-    @apply font-extralight text-sm pb-5 leading-relaxed text-gray-400
-  }
-  .xp-skill{
-    @apply bg-cyan-500/30 rounded-full mb-2 px-3.5 py-1.5 me-2 text-cyan-500 font-medium text-xs w-fit
-  }
+    .text-hover {
+        color: rgb(var(--light-green))
+    }
 
-  /*  Project Section */
-  .project-img {
-    @apply border-solid border-2 rounded-md border-gray-700 shadow-lg
-    hover:border-gray-500 transition-colors duration-300 ease-in-out
-  }
+    /* lg styles */
+    .hero-container {
+        @apply lg:h-[90vh] lg:w-1/2 lg:fixed
+    }
 
-  .xp-link {
-    @apply flex gap-3 font-medium w-fit text-sm text-gray-300 pb-3
-    hover:text-yellow-400 hover:cursor-pointer transition-colors duration-300 ease-in-out
-  }
-}
+    .copy-container {
+        @apply lg:w-1/2 lg:ms-auto lg:z-10
+    }
 
-.section-padding {
-  padding-top: 50px;
-  padding-bottom: 50px;
+
+    /*Section styles*/
+    .section-padding {
+        @apply py-[50px] lg:mb-8
+    }
+
+    .section-title {
+        @apply uppercase pb-12 text-base
+        lg:hidden
+    }
+
+    .section-body {
+        @apply font-extralight text-gray-400  leading-relaxed
+    }
+
+    .about-link {
+        @apply font-medium text-gray-300
+        hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
+    }
+
+    /* Experience Section */
+    .xp-date {
+        @apply font-medium text-xs text-gray-400 uppercase
+    }
+
+    .xp-title {
+        @apply font-medium text-gray-300 text-base pb-3
+        w-fit flex items-end hover:items-center hover:gap-0.5
+        hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
+        lg:group-hover:text-hover lg:group-hover:items-center lg:group-hover:gap-0.5
+    }
+
+    .xp-body {
+        @apply font-extralight text-sm pb-5 leading-relaxed text-gray-400
+    }
+
+    .xp-skill {
+        @apply bg-[color:rgba(var(--light-green),0.2)] text-[color:rgb(var(--light-green))] rounded-full mb-2 px-3.5 py-1.5 me-2  font-medium text-xs w-fit
+    }
+
+
+    /*  Project Section */
+    .project-img {
+        @apply border-solid border-2 rounded-md border-gray-700 shadow-lg
+        hover:border-gray-500 transition-colors duration-300 ease-in-out
+    }
+
+    .xp-link {
+        @apply flex gap-3 font-medium w-fit text-sm text-gray-300 pb-3
+        hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
+    }
+
+    .lg-hover {
+        @apply hover:bg-[rgba(var(--dark),0.3)] hover:cursor-pointer lg:p-4
+    }
+
+    /* Custom CSS for opacity effect */
+    .items-container:hover .lg-hover:not(:hover) {
+        @apply opacity-50;
+    }
 }
 
 .mouse-glow {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-  border-radius: 50%;
-  pointer-events: none;
-  transition: transform 0.1s ease;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    opacity: 60%;
+    background: radial-gradient(circle, rgba(0, 127, 128, 0.3), rgba(255, 255, 255, 0.0));
+    filter: blur(50px);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease;
 }
+
+

@@ -1,16 +1,17 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {FaGithub, FaLinkedin, FaInstagram} from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <section className="section-padding" id="hero-section">
-            <h1 className="text-5xl font-bold pb-4">Mitti Enos Kyeza</h1>
-            <h3 className="text-xl font-medium pb-4">Senior Full-Stack Developer</h3>
-            <p className="section-body"
-               style={{ width: "280px"}}>
-                I build software solutions that deliver exceptional user experiences.
-            </p>
-
+        <section className="section-padding flex flex-col lg:justify-between h-full" id="hero-section">
+            <div>
+                <h1 className="text-5xl font-bold pb-4">Mitti Enos Kyeza</h1>
+                <h3 className="text-xl font-medium pb-4">Senior Full-Stack Developer</h3>
+                <p className="section-body"
+                   style={{width: "280px"}}>
+                    I build software solutions that deliver exceptional user experiences.
+                </p>
+            </div>
             <div className="socials flex gap-5 pt-8">
                 <a href="https://github.com/enoskyeza" target="_blank">
                     <FaGithub
