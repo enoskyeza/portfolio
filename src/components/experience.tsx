@@ -9,7 +9,7 @@ const Experience = () => {
             <h2 className="section-title">Experience</h2>
             <div className="items-container">
                 {experiences.map((exp) => (
-                    <div key={exp.id} className="sm:flex gap-3 pb-16 lg-hover group">
+                    <div key={exp.id} className="sm:flex gap-3 pb-16 lg:lg-hover group">
                         <div className="sm:w-1/4 mb-3 sm:mb-0">
                             <p className="xp-date"> {exp.start} — {exp.end} </p>
                         </div>
