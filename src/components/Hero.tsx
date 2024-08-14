@@ -1,5 +1,6 @@
 import React from "react";
 import {FaGithub, FaLinkedin, FaInstagram} from "react-icons/fa";
+import Nav from "./nav"
 
 const Hero = () => {
     return (
@@ -11,6 +12,9 @@ const Hero = () => {
                    style={{width: "280px"}}>
                     I build software solutions that deliver exceptional user experiences.
                 </p>
+                <div className="mt-16 hidden lg:block">
+                    <Nav/>
+                </div>
             </div>
             <div className="socials flex gap-5 pt-8">
                 <a href="https://github.com/enoskyeza" target="_blank">
