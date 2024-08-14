@@ -4,7 +4,7 @@ import About from "@/components/about";
 import Experience from "@/components/experience";
 import Project from "@/components/project";
 import Blog from "@/components/blog";
-import { useEffect } from "react";
+import {useEffect} from "react";
 
 export default function Home() {
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function Home() {
 
         const handleMouseMove = (event: MouseEvent) => {
             if (glow) {
-                const { clientX: x, clientY: y } = event;
+                const {clientX: x, clientY: y} = event;
                 const scrollX = window.scrollX;
                 const scrollY = window.scrollY;
                 glow.style.transform = `translate(${x - 250 + scrollX}px, ${y - 250 + scrollY}px)`;
@@ -27,13 +27,19 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="bg-custom flex min-h-screen flex-col p-12">
-            <div className="mouse-glow"></div>
-            <Hero />
-            <About />
-            <Project />
-            <Experience />
-            <Blog />
+        <main className="bg-custom min-h-screen p-12">
+            <div className="mouse-glow hidden lg:block"></div>
+            <div className="relative mx-auto lg:flex max-w-6xl px-8">
+                <div className="hero-container">
+                    <Hero/>
+                </div>
+                <div className="copy-container">
+                    <About/>
+                    <Project/>
+                    <Experience/>
+                    <Blog/>
+                </div>
+            </div>
         </main>
     );
 }

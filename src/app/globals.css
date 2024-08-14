@@ -67,13 +67,27 @@ body {
       color:rgb(var(--light-green))
     }
 
+    /* lg styles */
+    .hero-container {
+       @apply lg:h-[90vh] lg:w-1/2 lg:fixed
+    }
+
+    .copy-container {
+        @apply lg:w-1/2 lg:ms-auto lg:z-10
+    }
+
+
+    /*Section styles*/
+    .section-padding {
+    @apply py-[50px] lg:mb-8
+}
     .section-title {
         @apply uppercase pb-12 text-base
+        lg:hidden
     }
 
     .section-body {
         @apply font-extralight text-gray-400  leading-relaxed
-
     }
 
     .about-link {
@@ -112,13 +126,7 @@ body {
     }
 }
 
-.section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .mouse-glow {
-    display: none;
     position: absolute;
     width: 500px;
     height: 500px;
