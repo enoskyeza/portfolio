@@ -19,7 +19,7 @@
     /* Gradient 2 */
     --gradient-primary: linear-gradient(135deg, hsla(224, 26%, 17%, 1) 0%, hsla(194, 51%, 18%, 1) 84%, hsla(190, 60%, 18%, 1) 92%, hsla(185, 71%, 19%, 1) 100%);
 
-  /* Gradient 2 */
+    /* Gradient 2 */
     --gradient-secondary: linear-gradient(45deg, hsla(224, 26%, 17%, 1) 0%, hsla(194, 51%, 18%, 1) 84%, hsla(190, 60%, 18%, 1) 100%);
 
 }
@@ -56,20 +56,20 @@ body {
     /*    text-wrap: balance;*/
     /*}*/
     .bg-gradient-custom {
-      background: var(--gradient-secondary);
+        background: var(--gradient-secondary);
     }
 
     .bg-custom {
-      background: var(--dark);
+        background: var(--dark);
     }
 
     .text-hover {
-      color:rgb(var(--light-green))
+        color: rgb(var(--light-green))
     }
 
     /* lg styles */
     .hero-container {
-       @apply lg:h-[90vh] lg:w-1/2 lg:fixed
+        @apply lg:h-[90vh] lg:w-1/2 lg:fixed
     }
 
     .copy-container {
@@ -79,8 +79,9 @@ body {
 
     /*Section styles*/
     .section-padding {
-    @apply py-[50px] lg:mb-8
-}
+        @apply py-[50px] lg:mb-8
+    }
+
     .section-title {
         @apply uppercase pb-12 text-base
         lg:hidden
@@ -104,6 +105,7 @@ body {
         @apply font-medium text-gray-300 text-base pb-3
         w-fit flex items-end hover:items-center hover:gap-0.5
         hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
+        lg:group-hover:text-hover lg:group-hover:items-center lg:group-hover:gap-0.5
     }
 
     .xp-body {
@@ -114,6 +116,7 @@ body {
         @apply bg-[color:rgba(var(--light-green),0.2)] text-[color:rgb(var(--light-green))] rounded-full mb-2 px-3.5 py-1.5 me-2  font-medium text-xs w-fit
     }
 
+
     /*  Project Section */
     .project-img {
         @apply border-solid border-2 rounded-md border-gray-700 shadow-lg
@@ -123,6 +126,15 @@ body {
     .xp-link {
         @apply flex gap-3 font-medium w-fit text-sm text-gray-300 pb-3
         hover:text-hover hover:cursor-pointer transition-colors duration-300 ease-in-out
+    }
+
+    .lg-hover {
+        @apply hover:bg-[rgba(var(--dark),0.3)] hover:cursor-pointer lg:p-4
+    }
+
+    /* Custom CSS for opacity effect */
+    .projects:hover .lg-hover:not(:hover) {
+        @apply opacity-50;
     }
 }
 
