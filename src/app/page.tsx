@@ -27,7 +27,7 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="bg-custom min-h-screen p-6 md:p-12">
+        <main className="bg-gradient-custom min-h-screen p-6 md:p-12">
             <div className="mouse-glow hidden lg:block"></div>
             <div className="relative mx-auto lg:flex max-w-6xl lg:px-8">
                 <div className="hero-container">
