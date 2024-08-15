@@ -1,27 +1,33 @@
 import React, { useState } from "react";
 
 const Nav = () => {
-    const [activeLink, setActiveLink] = useState('');
+    const [activeLink, setActiveLink] = useState('about-section');
 
     const handleLinkClick = (link: string) => {
         setActiveLink(link);
     };
 
-    const links = [
-        'About', 'Projects', 'Experience'
-    ]
 
     return (
         <div className="flex flex-col">
-            {links.map(link => (
             <a
-                key={link}
-                className={`nav-link-custom ${activeLink === link ? 'active' : ''}`}
-                onClick={() => handleLinkClick(link)}
+                className={`nav-link-custom ${activeLink === 'about-section' ? 'active' : ''}`}
+                onClick={() => handleLinkClick('about-section')}
             >
-                {link}
+                About
             </a>
-            ))}
+            <a
+                className={`nav-link-custom ${activeLink === 'project-section' ? 'active' : ''}`}
+                onClick={() => handleLinkClick('project-section')}
+            >
+                Projects
+            </a>
+            <a
+                className={`nav-link-custom ${activeLink === 'exp-section' ? 'active' : ''}`}
+                onClick={() => handleLinkClick('exp-section')}
+            >
+                Experience
+            </a>
         </div>
     )
 }
