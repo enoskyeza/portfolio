@@ -3,9 +3,11 @@ import React, { useState } from "react";
 const Nav = () => {
     const [activeLink, setActiveLink] = useState('about-section');
 
-    const handleLinkClick = (link: string) => {
-        setActiveLink(link);
+    const handleLinkClick = (sectionId: string) => {
+        setActiveLink(sectionId);
+        document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
     };
+
 
 
     return (
@@ -23,8 +25,8 @@ const Nav = () => {
                 Projects
             </a>
             <a
-                className={`nav-link-custom ${activeLink === 'exp-section' ? 'active' : ''}`}
-                onClick={() => handleLinkClick('exp-section')}
+                className={`nav-link-custom ${activeLink === 'experience-section' ? 'active' : ''}`}
+                onClick={() => handleLinkClick('experience-section')}
             >
                 Experience
             </a>
