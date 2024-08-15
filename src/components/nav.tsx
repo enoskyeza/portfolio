@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
 const Nav = () => {
-    const [isActive, setIsActive] = React.useState(true)
+    const [activeLink, setActiveLink] = useState('');
+
+    const handleLinkClick = (link: string) => {
+        setActiveLink(link);
+    };
 
     return (
         <div className="flex flex-col">
