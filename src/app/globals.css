@@ -129,7 +129,7 @@ body {
     }
 
     .lg-hover {
-        @apply hover:bg-[rgba(0,0,0,0.1)] hover:cursor-pointer lg:p-4
+        @apply hover:bg-[rgba(0,0,0,0.1)] hover:cursor-pointer lg:p-4 mb-3
     }
 
     /* Custom CSS for opacity effect */
