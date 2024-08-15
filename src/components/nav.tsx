@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 
 const Nav = () => {
     const [activeLink, setActiveLink] = useState('about-section');
@@ -7,6 +7,26 @@ const Nav = () => {
         setActiveLink(sectionId);
         document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
     };
+
+
+    const handleScroll = () => {
+        const sections = document.querySelectorAll('section');
+        let currentSectionId = 'about-section';
+
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop <= 150) {
+                currentSectionId = section.getAttribute('id') as string;
+            }
+        });
+
+        setActiveLink(currentSectionId);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
 
 
