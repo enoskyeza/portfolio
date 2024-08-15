@@ -7,11 +7,21 @@ const Nav = () => {
         setActiveLink(link);
     };
 
+    const links = [
+        'About', 'Projects', 'Experience'
+    ]
+
     return (
         <div className="flex flex-col">
-            <a className="nav-link-custom">About</a>
-            <a className="nav-link-custom">Experience</a>
-            <a className="nav-link-custom">Projects</a>
+            {links.map(link => (
+            <a
+                key={link}
+                className={`nav-link-custom ${activeLink === link ? 'active' : ''}`}
+                onClick={() => handleLinkClick(link)}
+            >
+                {link}
+            </a>
+            ))}
         </div>
     )
 }
