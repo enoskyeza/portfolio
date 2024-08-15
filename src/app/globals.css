@@ -141,6 +141,12 @@ body {
         @apply mb-3 active:text-hover
         hover:ps-6 transition-all duration-300 ease-in-out hover:text-hover hover:cursor-pointer
     }
+
+    .nav-link-custom::before {
+        content: '';
+        width: 20px;
+        transform: translateY(-50%);
+    }
 }
 
 .mouse-glow {
