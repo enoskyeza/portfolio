@@ -15,7 +15,7 @@ export default function Home() {
                 const {clientX: x, clientY: y} = event;
                 const scrollX = window.scrollX;
                 const scrollY = window.scrollY;
-                glow.style.transform = `translate(${x - 250 + scrollX}px, ${y - 250 + scrollY}px)`;
+                glow.style.transform = `translate(${x - 320 + scrollX}px, ${y - 320 + scrollY}px)`;
             }
         };
 

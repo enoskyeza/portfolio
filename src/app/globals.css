@@ -129,13 +129,46 @@ body {
     }
 
     .lg-hover {
-        @apply hover:bg-[rgba(var(--dark),0.3)] hover:cursor-pointer lg:p-4
+        @apply hover:bg-[rgba(0,0,0,0.1)] hover:cursor-pointer lg:p-4 mb-3
     }
 
     /* Custom CSS for opacity effect */
     .items-container:hover .lg-hover:not(:hover) {
         @apply opacity-50;
     }
+
+    .nav-link-custom {
+        @apply mb-3 active:text-hover ps-8
+        hover:ps-12 transition-all duration-300 ease-in-out hover:text-hover hover:cursor-pointer
+        relative
+    }
+
+    .nav-link-custom.active {
+        @apply text-hover ps-12
+    }
+}
+
+
+.nav-link-custom::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 2px;
+    background-color: white; /* Assuming you have a CSS variable for the hover color */
+    width: 20px;
+    transition: width 0.3s ease-in-out;
+    transform: translateY(-50%);
+}
+
+.nav-link-custom:hover::before {
+    width: 40px; /* Adjust the length of the stroke on hover */
+    background: rgb(var(--light-green));
+}
+
+.nav-link-custom.active::before {
+    background: rgb(var(--light-green));
+    width: 40px; /* Maintain stroke length on active */
 }
 
 .mouse-glow {
