@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Nav = () => {
+    const [isActive, setIsActive] = React.useState(true)
+
     return (
         <div className="flex flex-col">
             <a className="nav-link-custom">About</a>
