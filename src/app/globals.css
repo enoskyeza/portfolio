@@ -143,33 +143,34 @@ body {
         relative
     }
 
-    .nav-link-custom::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        height: 2px;
-        background-color: var(--light-green); /* Assuming you have a CSS variable for the hover color */
-        width: 20px;
-        transition: width 0.3s ease-in-out;
-        transform: translateY(-50%);
-    }
-
-    .nav-link-custom:hover::before {
-        width: 100%; /* Expands the stroke to full width on hover */
-    }
-
-    .nav-link-custom:hover::before {
-        width: 1.5rem; /* Adjust the length of the stroke on hover */
-    }
-
-    .nav-link-custom.active::before {
-        width: 1.5rem; /* Maintain stroke length on active */
-    }
-
     .nav-link-custom.active {
         @apply text-hover;
     }
+}
+
+
+.nav-link-custom::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 2px;
+    background-color: white; /* Assuming you have a CSS variable for the hover color */
+    width: 20px;
+    transition: width 0.3s ease-in-out;
+    transform: translateY(-50%);
+}
+
+.nav-link-custom:hover::before {
+    width: 100%; /* Expands the stroke to full width on hover */
+}
+
+.nav-link-custom:hover::before {
+    width: 1.5rem; /* Adjust the length of the stroke on hover */
+}
+
+.nav-link-custom.active::before {
+    width: 1.5rem; /* Maintain stroke length on active */
 }
 
 .mouse-glow {
