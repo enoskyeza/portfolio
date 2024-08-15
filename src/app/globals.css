@@ -138,13 +138,13 @@ body {
     }
 
     .nav-link-custom {
-        @apply mb-3 active:text-hover
-        hover:ps-6 transition-all duration-300 ease-in-out hover:text-hover hover:cursor-pointer
+        @apply mb-3 active:text-hover ps-8
+        hover:ps-12 transition-all duration-300 ease-in-out hover:text-hover hover:cursor-pointer
         relative
     }
 
     .nav-link-custom.active {
-        @apply text-hover;
+        @apply text-hover ps-12
     }
 }
 
@@ -162,15 +162,11 @@ body {
 }
 
 .nav-link-custom:hover::before {
-    width: 100%; /* Expands the stroke to full width on hover */
-}
-
-.nav-link-custom:hover::before {
-    width: 1.5rem; /* Adjust the length of the stroke on hover */
+    width: 40px; /* Adjust the length of the stroke on hover */
 }
 
 .nav-link-custom.active::before {
-    width: 1.5rem; /* Maintain stroke length on active */
+    width: 40px; /* Maintain stroke length on active */
 }
 
 .mouse-glow {
