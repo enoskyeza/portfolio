@@ -14,7 +14,9 @@ const About = () => {
                 Fast-forward to today, and I’ve had the privilege of developing software for an
                 <a href="https://wokober.com/" target="_blank" className='about-link'> Educational Foundation</a> in Northern Uganda,
                 a <a href="https://prestigedrivingschool.co.ug/" target="_blank" className='about-link'>Leading driving school</a> in Uganda,
+                one of the <a href="https://matuggaindustries.com" target="_blank" className='about-link'>Leading companies in agricultural sector</a> in Uganda,
                 a <a href="https://www.femispace.com/" target="_blank" className='about-link'>Female health and wellness company</a> in the USA, and
+                events companies including <a href="https://explorewithlocate.com" target="_blank" className='about-link'>Locate Africa</a>, <a href="https://explorewithlocate.com" target="_blank" className='about-link'>Wealth Camp Events</a>,
                 a <a href="#" target="_blank" className='about-link'>Medical laboratory</a>.
                 These experiences have broadened my understanding of how technology can be integrated into
                 various facets of life, driving meaningful impact in each area.
