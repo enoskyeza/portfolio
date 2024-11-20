@@ -138,13 +138,13 @@ body {
     }
 
     .nav-link-custom {
-        @apply mb-3 active:text-hover ps-8
-        hover:ps-12 transition-all duration-300 ease-in-out hover:text-hover hover:cursor-pointer
+        @apply mb-6 active:text-hover ps-[40px] uppercase text-xs text-gray-300
+        hover:ps-[75px] transition-all duration-300 ease-in-out hover:text-hover hover:cursor-pointer
         relative
     }
 
     .nav-link-custom.active {
-        @apply text-hover ps-12
+        @apply text-hover ps-[75px]
     }
 }
 
@@ -154,7 +154,7 @@ body {
     position: absolute;
     left: 0;
     top: 50%;
-    height: 2px;
+    height: 1px;
     background-color: white; /* Assuming you have a CSS variable for the hover color */
     width: 20px;
     transition: width 0.3s ease-in-out;
@@ -162,13 +162,13 @@ body {
 }
 
 .nav-link-custom:hover::before {
-    width: 40px; /* Adjust the length of the stroke on hover */
+    width: 55px; /* Adjust the length of the stroke on hover */
     background: rgb(var(--light-green));
 }
 
 .nav-link-custom.active::before {
     background: rgb(var(--light-green));
-    width: 40px; /* Maintain stroke length on active */
+    width: 55px; /* Maintain stroke length on active */
 }
 
 .mouse-glow {
