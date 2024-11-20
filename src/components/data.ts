@@ -67,13 +67,52 @@ export const projects: Project[] = [
         img_url: '/toyapp.jpg',
         name: 'Toy Festival App',
         description: `
-        The Toy Festival App was created for Wokober's annual Toy Making and Innovation Festival in Uganda. 
+        The Toy Festival App was created for Wokober's annual Toy and Innovation Festival in Uganda. 
         It streamlines the registration and management of participants, payment approvals, and provides a judging dashboard 
         with an automated rubric system for awarding points and calculating winners. 
         The app is integral to the festival's success handling data of over 300 participants. Originally built with Django, 
         it is currently being updated with React, Next.js, and Django Rest Framework.`,
         rating: '300+',
         skills: ['Django', 'React', 'Next.js', 'Django Rest Framework', 'Python', 'Tailwind']
+    },
+    {
+        id: 4,
+        img_url: '/entabiro.jpg',
+        name: 'Entabiro',
+        description: `
+        Entabiro is a robust in-house application developed for Farmer's Center Kibuye, a hub providing farm supplies and expert agricultural support. 
+        The app streamlines operations by managing sales, tracking fleets, and fostering customer engagement through features like SMS promotions. 
+        It also handles customer memberships, enabling discounts and rewards for loyal patrons. 
+        Key modules include requisitions management, sales tracking, fleet monitoring, and a customer follow-up system. 
+        Deployed on DigitalOcean with Docker, this solution has become indispensable for modernizing the agricultural supply chain.`,
+        rating: '800+',
+        skills: ['Django Rest Framework', 'React', 'Next.js', 'PostgreSQL', 'Tailwind CSS', 'DigitalOcean', 'Docker', 'Nginx']
+    },
+    {
+        id: 5,
+        img_url: '/wealthcamp.jpg',
+        name: 'Ticketing Platform for Wealth Camp Events',
+        description: `
+        This cutting-edge ticketing platform was created for Wealth Camp Events, a leading event management company in Uganda. 
+        The application simplifies ticket sales, event promotion, and user management, providing a seamless experience for organizers and attendees. 
+        Its scalable architecture handles high traffic during ticket sales, ensuring reliability. 
+        Built with a modern tech stack, the platform integrates secure payment gateways, real-time ticket validation, and detailed analytics for event performance.`,
+        rating: '2000+',
+        skills: ['React', 'Next.js', 'Tailwind CSS', 'Django Rest Framework', 'PostgreSQL', 'DigitalOcean', 'Docker', 'Nginx']
+    },
+    {
+        id: 6,
+        img_url: '/locate.jpg',
+        name: 'LocateApp',
+        description: `
+        LocateApp is a user-friendly application that helps individuals discover the best places around them, 
+        tailored to their preferences. Whether searching for restaurants, hangout spots, or events, 
+        LocateApp offers recommendations backed by detailed reviews, menus, and ticketing information. 
+        The app leverages machine learning algorithms to provide personalized suggestions and integrates seamlessly 
+        with third-party services to enhance user experiences. Deployed with Docker on DigitalOcean, it’s a go-to platform 
+        for urban explorers.`,
+        rating: '5000+',
+        skills: ['React', 'Next.js', 'Tailwind CSS', 'Django Rest Framework', 'PostgreSQL', 'DigitalOcean', 'Docker', 'Nginx', 'Machine Learning']
     }
 ]
 

@@ -28,8 +28,6 @@ const Nav = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-
-
     return (
         <div className="flex flex-col">
             <a
