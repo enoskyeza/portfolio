@@ -26,10 +26,13 @@ export const experiences: Experience[] = [
         responsibility: `
             Led Jitu Technologies, managing and executing a range of project-based contracts for various clients. 
             Key projects include:
-             **LabPro:** A lab management system.
-             **Certification and Verification Software:** Developed for Prestige Driving School Uganda.
-             **Toy Festival App:** developed for Wokober. 
-             **Websites** for various clients from 2020 to present. 
+             *LabPro:* A lab management system.
+             *Entabiro:* A custome sale, customer engagement, fleet tracking and staff management app for Farmer Center Kibuye.
+             *LocateApp:* A platform recommending restaurants, events, and activities based on user preferences.
+             *TicketApp:* An event management and ticketing app.
+             *Certification and Verification Software:* Developed for Prestige Driving School Uganda.
+             *Toy Festival App:* developed for Wokober. 
+             *Websites* for various clients from 2020 to present. 
             Oversaw project planning, development, and delivery, ensuring high-quality results and client satisfaction.`,
         skills: ['Project Management', 'Leadership', 'Python', 'Django', 'React', 'Next.js', 'Tailwind CSS', 'Docker', 'AWS', 'Git']
     }
